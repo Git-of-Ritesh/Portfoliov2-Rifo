@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
           </p>
           <div className="flex items-center gap-3 text-lg">
             <span>Socials:</span>
-            {socials.map((social, index) => (
+            {socials.map((social) => (
               <a 
               key={social.SocialImageName}
               href="#" 
