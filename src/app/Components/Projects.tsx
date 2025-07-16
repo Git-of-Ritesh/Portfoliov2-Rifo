@@ -70,7 +70,7 @@ const projects: ProjectDetails[] = [
 
 const Projects = () => {
     return (
-        <div className='flex flex-col gap-80 mt-30 px-30'>
+        <div className='flex flex-col gap-40 md:gap-80 mt-10 md:mt-30 px-5 md:px-30'>
             {/* Project image */}
             {projects.map((project, index) => (
                 <div
@@ -84,11 +84,11 @@ const Projects = () => {
                     {/* details  */}
                     <div className="flex flex-col gap-3 w-full md:w-1/2">
                         <div>
-                            <h2 className="text-2xl geist-font-bold font-bold">{project.ProjectName}</h2>
-                            <p className="text-gray-500 mb-2">{project.ProjectDate}</p>
+                            <h2 className="text-xl md:text-2xl geist-font-bold font-bold">{project.ProjectName}</h2>
+                            <p className="text-sm md:text-md text-gray-500 mb-2">{project.ProjectDate}</p>
                         </div>
 
-                        <p className="mb-4 pr-10">{project.ProjectDescription}</p>
+                        <p className="mb-4 md:pr-10 text-sm md:text-md">{project.ProjectDescription}</p>
                         <div className='flex items-center gap-2 mb-4'>
                             <h3>Tools:</h3>
                             <div className='bg-white p-2 rounded-xl'>
@@ -106,13 +106,13 @@ const Projects = () => {
                         </div>
 
                         {/* buttons */}
-                        <div className='flex justify-between'>
+                        <div className='flex justify-between items-center'>
                             <button
-                                className='flex gap-2 bg-white px-4 py-3 geist-font rounded-2xl'
+                                className='flex gap-2 text-sm md:text-md bg-white px-3 py-2 md:px-4 md:py-3 geist-font rounded-xl md:rounded-2xl'
                             >View Project<ArrowRight className='border-1 border-gray-400 rounded-md stroke-1' /></button>
                             <div className='flex gap-6'>
-                                <button className='flex gap-2'><GitBranchPlus className='stroke-1'/>Repository</button>
-                                <button className='flex gap-2'><Link className='stroke-1'/>Live</button>
+                                <button className='flex items-center gap-2 text-sm md:text-md'><GitBranchPlus className='stroke-1 p-1/2'/>Repository</button>
+                                <button className='flex items-center gap-2 text-sm md:text-md'><Link className='stroke-1 text-sm p-1/2'/>Live</button>
                             </div>
                         </div>
                     </div>

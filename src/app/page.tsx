@@ -110,8 +110,8 @@ export default function Home() {
 
       {/* Projexts sections */}
       <section className="flex flex-col">
-        <div className="flex justify-center cedarville-cursive-regular text-5xl">Featured Projects</div>
-        <div className="flex justify-center text-center geist-font-bold px-80 mt-10 text-gray-600">Proof I’ve Done More Than Just Watch Tutorials.</div>
+        <div className="flex justify-center cedarville-cursive-regular text-3xl md:text-5xl">Featured Projects</div>
+        <div className="flex justify-center text-center geist-font-bold px-5 md:px-80 text-sm md:text-md mt-5 md:mt-10 text-gray-600">Proof I’ve Done More Than Just Watch Tutorials.</div>
         <Project1 />
         <button className="flex justify-center items-center gap-4 mt-30">See more projects<ArrowRight className='border-1 border-gray-400 rounded-md stroke-1' /></button>
       </section>
