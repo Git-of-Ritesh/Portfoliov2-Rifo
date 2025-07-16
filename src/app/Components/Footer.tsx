@@ -42,17 +42,17 @@ const socials: SocialDetails[] = [
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-neutral-900 rounded-3xl -mt-40 mx-4 my-6 p-10 md:p-16 text-white relative overflow-hidden">
+    <footer className="bg-neutral-900 rounded-3xl -mt-60 md:-mt-40 md:mx-4 md:my-6 p-10 md:p-16 text-white relative overflow-hidden">
       <div className="flex flex-col md:flex-row justify-between gap-10">
         {/* Left Section */}
         <div className="flex-1 min-w-[250px]">
-          <h1 className="text-5xl md:text-5xl cedarville-cursive-regular mb-2">Ritesh pandey 😊</h1>
+          <h1 className="text-4xl md:text-5xl cedarville-cursive-regular mb-2">Ritesh pandey 😊</h1>
           <h2 className="text-4xl md:text-5xl font-light mb-4">Lets Collaborate</h2>
-          <p className="text-gray-300 mb-8 max-w-md">
+          <p className="text-gray-300 text-sm md:text-md mb-8 max-w-md">
             I love turning ideas into real products with clean design and solid code. This is just a glimpse of what I can do.
           </p>
           <div className="flex items-center gap-3 text-lg">
-            <span>Socials:</span>
+            <span className='text-sm md:text-md'>Socials:</span>
             {socials.map((social) => (
               <a 
               key={social.SocialImageName}
@@ -63,7 +63,7 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Center Section */}
-        <div className="flex flex-1 justify-evenly min-w-[250px]">
+        <div className="flex flex-1 justify-start gap-8 md:justify-evenly md:gap-0 min-w-[250px]">
           <div>
             <h3 className="text-gray-400 mb-2">General</h3>
             <ul className="space-y-2">
@@ -100,7 +100,7 @@ const Footer: React.FC = () => {
       </div>
       {/* Up Arrow Floating Button */}
       <button
-        className="absolute right-10 bottom-10 bg-white text-neutral-900 rounded-full p-4 shadow-lg hover:bg-gray-200 transition flex items-center justify-center"
+        className="absolute right-10 md:bottom-10 bottom-50 bg-white text-neutral-900 rounded-full p-2 md:p-4 shadow-lg hover:bg-gray-200 transition flex items-center justify-center"
         aria-label="Scroll to top"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
