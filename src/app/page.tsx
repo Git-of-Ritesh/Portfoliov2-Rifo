@@ -34,8 +34,8 @@ const cards: CapabilityCard[] = [
   }
 ]
 
-const rotateCards: string[] = ['-rotate-5', '-rotate-1', 'rotate-2', 'rotate-5'];
-const CardPlaceing: string[] = ['m-0', '-mt-8', 'mb-1', 'mt-8']
+const rotateCards: string[] = ['-rotate-5', 'rotate-2 md:-rotate-1', '-rotate-2 md:rotate-2', 'rotate-5'];
+const CardPlaceing: string[] = ['m-0', 'md:-mt-8 -md-6', 'mb-1 -mt-2 md:mt-0', '-mt-3 md:mt-10']
 
 
 export default function Home() {
@@ -87,11 +87,11 @@ export default function Home() {
 
       {/* cards sections */}
       <section>
-        <div className="flex justify-center cedarville-cursive-regular text-5xl">Things i am capable of</div>
-        <div className="flex justify-center text-center geist-font-bold px-80 mt-10 text-gray-600">Here’s a collection of things I’ve actually done — not just read about or watched tutorials for. From building full-stack apps to designing clean UIs that don’t hurt your eyes, I tend to get things working eventually. But hey, deadlines are sacred.</div>
+        <div className="flex justify-center cedarville-cursive-regular text-3xl md:text-5xl">Things i am capable of</div>
+        <div className="flex justify-center text-center geist-font-bold text-sm md:text-md px-10 md:px-80 mt-5 md:mt-10 text-gray-600">Here’s a collection of things I’ve actually done — not just read about or watched tutorials for. From building full-stack apps to designing clean UIs that don’t hurt your eyes, I tend to get things working eventually. But hey, deadlines are sacred.</div>
 
         {/* cards Div */}
-        <div className="flex justify-center mt-26">
+        <div className="flex md:flex-row flex-col items-center justify-center mt-26">
 
           {cards.map((card, index) => (
             <div
