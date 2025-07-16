@@ -70,9 +70,7 @@ const Navbar = () => {
             </div>
 
             {/* menu for mobile */}
-            <div>
-                <button className='bg-white flex md:hidden gap-2 p-3 rounded-xl'>Menu<AlignLeft className='border-1 border-gray-500 rounded-md p-1 stroke-1 drop-shadow-gray-200 drop-shadow-xl'/></button>
-            </div>
+                <button className='bg-white flex md:hidden lg:hidden gap-2 p-3 rounded-xl'>Menu<AlignLeft className='border-1 border-gray-500 rounded-md p-1 stroke-1 drop-shadow-gray-200 drop-shadow-xl'/></button>
         </div>
     )
 }
