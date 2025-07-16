@@ -46,13 +46,13 @@ export default function Home() {
         <div className=" relative flex gap-4">
           <h1 className="text-3xl md:text-6xl font-semibold geist-font-bold">Hi, I am</h1>
           <h1 className="realtive cedarville-cursive-regular text-3xl md:text-6xl">Ritesh</h1>
-          <video
+          {/* <video
             className="w-30 h-30 md:w-50 md:h-30 -top-10 left-24 md:-top-8 md:left-50 object-contain absolute"
             src='/Circle.webm'
             autoPlay
             muted
             playsInline
-          />
+          /> */}
           <Image
             width={110}
             height={110}
