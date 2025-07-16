@@ -58,7 +58,7 @@ export default function Home() {
             height={110}
             src={ProfilePhoto}
             alt="ProfilePhoto"
-            className="absolute -top-28 left-50 md:-top-25 md:left-95 border-5 border-white rounded-3xl drop-shadow-2xl rotate-12 hover:rotate-0 transition-transform duration-300" />
+            className="absolute -top-28 left-48 md:-top-25 md:left-96 border-5 border-white rounded-3xl drop-shadow-2xl rotate-12 hover:rotate-0 transition-transform duration-300" />
         </div>
 
         <div>
