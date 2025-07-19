@@ -1,5 +1,6 @@
 import React from 'react'
 import { Copy } from 'lucide-react';
+import Link from "next/link"
 
 type MenuLink = {
     id: string;
@@ -29,13 +30,13 @@ const MobileDropdown = () => {
     return (
         <div className='absolute bg-white right-5 top-full -mt-2 p-5 flex flex-col gap-8 rounded-xl'>
             {menuLinks.map((items, index) => (
-                <a
+                <Link
                     href={items.URL}
                     key={index}
                     className='geist-font text-left text-4xl'
                 >
                     {items.id}
-                </a>
+                </Link>
             ))}
 
             <div className='bg-black text-white p-5 flex gap-2 rounded-lg'>
