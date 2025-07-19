@@ -2,11 +2,14 @@
 
 import React, { useState, useRef, useEffect } from 'react'
 import { Copy, House, UserRound, PackageOpen, BookOpenText, AlignLeft } from 'lucide-react';
+import MobileDropdown from "./MobileDropdown"
+
 
 type NavItem = {
     id: string;
     icon: React.ReactNode;
 }
+
 
 const navItems: NavItem[] = [
     { id: "Home", icon: <House className="stroke-2" /> },
@@ -17,6 +20,11 @@ const navItems: NavItem[] = [
 
 
 const Navbar = () => {
+
+    const[mobileMenuActive, setMobileMenuActive] = useState(false);
+
+    const toggleMobileMenu = () => setMobileMenuActive(prev => !prev);
+
 
     const [activeIndex, setActiveIndex] = useState<number>(0);
     const indicatorRef = useRef<HTMLDivElement>(null);
@@ -46,7 +54,7 @@ const Navbar = () => {
                 <div
                     ref={indicatorRef}
                     className="absolute -left-4 top-1 w-14 h-10 p-3 z-10 bg-gray-100 rounded-xl transition-all duration-300"
-                    ></div>
+                ></div>
 
                 {navItems.map((item, index) => (
                     <button
@@ -70,7 +78,14 @@ const Navbar = () => {
             </div>
 
             {/* menu for mobile */}
-                <button className='bg-white flex md:hidden lg:hidden gap-2 p-3 rounded-xl'>Menu<AlignLeft className='border-1 border-gray-500 rounded-md p-1 stroke-1 drop-shadow-gray-200 drop-shadow-xl'/></button>
+            <button 
+            onClick={toggleMobileMenu}
+            className='logo relative bg-white flex md:hidden lg:hidden gap-2 p-3 rounded-xl'>Menu<AlignLeft className='border-1 border-gray-500 rounded-md p-1 stroke-1 drop-shadow-gray-200 drop-shadow-xl' /></button>
+
+            {mobileMenuActive && (
+                <MobileDropdown />
+            )}
+            
         </div>
     )
 }
