@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import Image from "next/image";
 import { ArrowRight, ChevronsDown, Eye, Heart, ArrowUpRight } from 'lucide-react';
 import ProfilePhoto from "./Images/IMG_3990 2.jpeg"
