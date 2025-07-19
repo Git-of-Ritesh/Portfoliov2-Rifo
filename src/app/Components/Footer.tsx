@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link'
 import { Send, ArrowUp } from 'lucide-react';
 import LinkedinImage from "../Images/Linkedin.png"
 import { StaticImageData } from 'next/image';
@@ -67,10 +68,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-gray-400 mb-2">General</h3>
             <ul className="space-y-2">
-              <li><a href="/" className="hover:underline">Home</a></li>
-              <li><a href="/About" className="hover:underline">About</a></li>
-              <li><a href="/Projects" className="hover:underline">Projects</a></li>
-              <li><a href="/Blogs" className="hover:underline">Blogs</a></li>
+              <li><Link href="/" className="hover:underline">Home</Link></li>
+              <li><Link href="/About" className="hover:underline">About</Link></li>
+              <li><Link href="/Projects" className="hover:underline">Projects</Link></li>
+              <li><Link href="/Blogs" className="hover:underline">Blogs</Link></li>
             </ul>
           </div>
           <div>
