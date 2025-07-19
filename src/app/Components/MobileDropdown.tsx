@@ -9,43 +9,44 @@ type MenuLink = {
 const menuLinks: MenuLink[] = [
     {
         id: "Home",
-        URL: "homeURL"
+        URL: "/"
     },
     {
         id: "About",
-        URL: "homeURL"
+        URL: "/About"
     },
     {
         id: "Projects",
-        URL: "homeURL"
+        URL: "/Projects"
     },
     {
         id: "Blog",
-        URL: "homeURL"
+        URL: "/Blog"
     }
 ];
 
 const MobileDropdown = () => {
-  return (
-    <div className='absolute bg-white right-5 top-full -mt-2 p-5 flex flex-col gap-8 rounded-xl'>
-                {menuLinks.map((items, index) => (
-                    <a
-                        key={index}
-                        className='geist-font text-left text-4xl'
-                    >
-                        {items.id}
-                    </a>
-                ))}
+    return (
+        <div className='absolute bg-white right-5 top-full -mt-2 p-5 flex flex-col gap-8 rounded-xl'>
+            {menuLinks.map((items, index) => (
+                <a
+                    href={items.URL}
+                    key={index}
+                    className='geist-font text-left text-4xl'
+                >
+                    {items.id}
+                </a>
+            ))}
 
-                <div className='bg-black text-white p-5 flex gap-2 rounded-lg'>
-                    pvtriteshpandey02@gmail.com
-                    <div className='flex items-center p-1 border-1 border-gray-300 rounded-md'>
-                        <Copy className='w-4 h-4' />
-                    </div>
+            <div className='bg-black text-white p-5 flex gap-2 rounded-lg'>
+                pvtriteshpandey02@gmail.com
+                <div className='flex items-center p-1 border-1 border-gray-300 rounded-md'>
+                    <Copy className='w-4 h-4' />
                 </div>
-
             </div>
-  )
+
+        </div>
+    )
 }
 
 export default MobileDropdown

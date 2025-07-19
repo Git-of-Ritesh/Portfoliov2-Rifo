@@ -67,10 +67,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-gray-400 mb-2">General</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="hover:underline">Home</a></li>
-              <li><a href="#" className="hover:underline">About</a></li>
-              <li><a href="#" className="hover:underline">Projects</a></li>
-              <li><a href="#" className="hover:underline">Blogs</a></li>
+              <li><a href="/" className="hover:underline">Home</a></li>
+              <li><a href="/About" className="hover:underline">About</a></li>
+              <li><a href="/Projects" className="hover:underline">Projects</a></li>
+              <li><a href="/Blogs" className="hover:underline">Blogs</a></li>
             </ul>
           </div>
           <div>
