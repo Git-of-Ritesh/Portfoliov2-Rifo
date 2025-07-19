@@ -22,7 +22,7 @@ const menuLinks: MenuLink[] = [
     },
     {
         id: "Blog",
-        URL: "/Blog"
+        URL: "/Blogs"
     }
 ];
 
