@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useRef, useEffect } from 'react'
-import { Copy, House, UserRound, PackageOpen, BookOpenText, AlignLeft } from 'lucide-react';
+import { Copy, House, UserRound, PackageOpen, BookOpenText, AlignLeft, X } from 'lucide-react';
 import MobileDropdown from "./MobileDropdown"
 
 
@@ -21,7 +21,7 @@ const navItems: NavItem[] = [
 
 const Navbar = () => {
 
-    const[mobileMenuActive, setMobileMenuActive] = useState(false);
+    const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
     const toggleMobileMenu = () => setMobileMenuActive(prev => !prev);
 
@@ -78,14 +78,23 @@ const Navbar = () => {
             </div>
 
             {/* menu for mobile */}
-            <button 
-            onClick={toggleMobileMenu}
-            className='logo relative bg-white flex md:hidden lg:hidden gap-2 p-3 rounded-xl'>Menu<AlignLeft className='border-1 border-gray-500 rounded-md p-1 stroke-1 drop-shadow-gray-200 drop-shadow-xl' /></button>
+            {!mobileMenuActive ?(
+                <button
+                    onClick={toggleMobileMenu}
+                    className='logo relative bg-white flex md:hidden lg:hidden gap-2 p-3 rounded-xl'>Menu<AlignLeft className='border-1 border-gray-500 rounded-md p-1 stroke-1 drop-shadow-gray-200 drop-shadow-xl' /></button>
+            )
+                    :
+                    (
+            <button
+                onClick={toggleMobileMenu}
+                className='logo relative bg-white flex md:hidden lg:hidden gap-2 p-3 rounded-3xl'><X /></button>
+                    )
+            }
 
             {mobileMenuActive && (
                 <MobileDropdown />
             )}
-            
+
         </div>
     )
 }
