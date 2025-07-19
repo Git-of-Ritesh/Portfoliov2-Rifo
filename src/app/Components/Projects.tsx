@@ -7,6 +7,7 @@ import ReactImage from '../Images/React.png'
 import PythonImage from '../Images/Python.png'
 import NodeJSImage from "../Images/Node.png"
 import MongoDBImage from "../Images/MongoDB.png"
+import ExpresJSImage from '../Images/Expressjs.png'
 import { ArrowRight, GitBranchPlus, Link } from 'lucide-react'
 
 type ProjectDetails = {
@@ -51,16 +52,16 @@ const projects: ProjectDetails[] = [
     // Project 2 details
     {
         ProjectName: "Notify - Note taking web app",
-        ProjectDate: "June 2025",
-        ProjectDescription: "A comprehensive full-stack web application designed to recommend personalized alternative medicines to users by analyzing their symptoms, health conditions, and personal preferences. The system utilizes machine learning algorithms to interpret user input and generate accurate, data-driven suggestions for suitable remedies.",
+        ProjectDate: "Dec 2024",
+        ProjectDescription: "Notify is more than just a note-taking app — it's your personal productivity companion. Designed with a perfect blend of simplicity and power, Notify helps you capture ideas, organize thoughts, and manage tasks effortlessly. Whether you're jotting down quick notes or structuring detailed plans, Notify provides a smooth, intuitive experience tailore",
         ProjectImageUrl: Project2Image,
         ProjectCaseStudyUrl: "THIS SHOULD GIVEN LATER",
         ProjectGitUrl: "gitlink",
         ProjectLiveUrl: "",
         ProjectTechStack1: ReactImage,
         ProjectTechStackName1: "React",
-        ProjectTechStack2: PythonImage,
-        ProjectTechStackName2: "Python",
+        ProjectTechStack2: ExpresJSImage,
+        ProjectTechStackName2: "ExpressJS",
         ProjectTechStack3: NodeJSImage,
         ProjectTechStackName3: "NodeJS",
         ProjectTechStack4: MongoDBImage,
