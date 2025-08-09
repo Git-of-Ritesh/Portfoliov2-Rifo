@@ -76,7 +76,9 @@ const Navbar = () => {
     navItems.forEach((item) => {
       try {
         router.prefetch?.(item.path);
-      } catch (error) {}
+      } catch (error) {
+        console.log(error);
+      }
     });
   }, [router]);
 
