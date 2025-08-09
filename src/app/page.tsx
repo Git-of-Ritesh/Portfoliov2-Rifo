@@ -81,7 +81,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col gap-80 mt-40 md:mt-50 z-40">
+    <div className="flex flex-col gap-80 mt-30 md:mt-50 z-40">
       <div className="flex flex-col pl-5 md:pl-20 justify-center">
         <div className=" relative flex gap-4">
           <h1 className="text-3xl hi md:text-6xl font-semibold geist-font-bold">
@@ -143,6 +143,17 @@ export default function Home() {
             <h3 className="geist-font text-gray-500">Likes</h3>
             <h3 className="geist-font">932</h3>
           </div>
+        </div>
+        <div className="flex gap-2 items-center p-3 sm:p-4 bg-linear-to-r from-green-100 to-transparent rounded-l-full sm:w-1/2 mt-5">
+          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+          <p className="flex items-center gap-2 geist-font">
+            Currently working at Webninjaz{" "}
+            <img
+              className="sm:w-25 w-20"
+              src="https://webninjaz.com/wp-content/uploads/2024/08/logo-white.png"
+              alt="Webninjaz logo"
+            />
+          </p>
         </div>
         <div ref={lernMoreRef}></div>
       </div>
