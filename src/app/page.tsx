@@ -104,7 +104,7 @@ export default function Home() {
 
         <div>
           <h2 className="text-3xl md:text-6xl font-semibold geist-font-bold">
-            A developer who know both design{" "}
+            A Engineer who know both design{" "}
           </h2>
         </div>
 
