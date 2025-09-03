@@ -49,7 +49,7 @@ const Navbar = () => {
   const handleCopyMail = () => {
     navigator.clipboard.writeText(email).then(() => {
       setCopiedMail(true);
-      setTimeout(() => setCopiedMail(false), 5000);
+      setTimeout(() => setCopiedMail(false), 4000);
     });
   };
 
@@ -83,7 +83,7 @@ const Navbar = () => {
   }, [router]);
 
   return (
-    <div className="flex justify-between items-center p-5 z-50 sticky top-0">
+    <div className="flex justify-between items-center p-5 z-50">
       {/* Protfolio Name */}
       <div>
         <h2 className="text-3xl geist-font-bold">Rifo</h2>
