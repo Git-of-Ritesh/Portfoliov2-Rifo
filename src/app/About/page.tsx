@@ -38,7 +38,7 @@ export default function AboutPage() {
         <h2 className="text-3xl geist-font-bold mb-2">Experience</h2>
         <div className="flex flex-col gap-4 mt-2">
           <div className="bg-white rounded-xl p-4 drop-shadow-md text-left">
-            <h3 className="geist-font-bold text-xl">Webninjaz (Current)</h3>
+            <h3 className="geist-font-bold text-xl">Webninjaz Current</h3>
             <p className="geist-font text-gray-600">Software Engineer</p>
             <p className="geist-font text-sm mt-1">
               Building modern web experiences and scalable products.
