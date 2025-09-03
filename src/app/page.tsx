@@ -87,13 +87,13 @@ export default function Home() {
           <h1 className="text-3xl hi md:text-6xl font-semibold geist-font-bold">
             Hi, I am Ritesh
           </h1>
-          <Image
+          {/* <Image
             width={110}
             height={110}
             src={ProfilePhoto}
             alt="ProfilePhoto"
             className="absolute -top-28 left-48 md:-top-25 md:left-96 border-5 border-white rounded-3xl drop-shadow-2xl rotate-12 hover:rotate-0 transition-transform duration-300"
-          />
+          /> */}
         </div>
 
         <div>

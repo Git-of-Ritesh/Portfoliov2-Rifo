@@ -83,7 +83,7 @@ const Navbar = () => {
   }, [router]);
 
   return (
-    <div className="flex justify-between items-center p-5 z-50">
+    <div className="flex justify-between items-center sticky top-0 md:static p-5 z-50">
       {/* Protfolio Name */}
       <div>
         <h2 className="text-3xl geist-font-bold">Rifo</h2>
