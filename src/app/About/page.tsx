@@ -6,12 +6,7 @@ export default function AboutPage() {
     <main className="flex flex-col items-center justify-center px-6 py-16 md:py-24 text-center gap-12">
       <section className="max-w-2xl">
         <h1 className="text-5xl md:text-6xl geist-font-bold mb-4">About Me</h1>
-        <p className="text-lg md:text-xl text-gray-600 geist-font">
-          Hi! I'm Ritesh Pandey, a passionate Software Engineer and Designer
-          based in Gurugram, Haryana, India. I love building beautiful,
-          functional products that make a difference. My journey blends
-          creativity and code, and I thrive on turning ideas into reality.
-        </p>
+        <p className="text-lg md:text-xl text-gray-600 geist-font">Hi</p>
       </section>
       <section className="max-w-2xl w-full">
         <h2 className="text-3xl geist-font-bold mb-2">Skills</h2>
