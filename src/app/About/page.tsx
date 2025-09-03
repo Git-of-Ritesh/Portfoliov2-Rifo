@@ -58,7 +58,7 @@ export default function AboutPage() {
       <section className="max-w-2xl w-full">
         <h2 className="text-3xl geist-font-bold mb-2">Contact</h2>
         <p className="geist-font text-lg">
-          Let's connect!{" "}
+          Lets connect!{" "}
           <a
             href="mailto:pvtriteshpandey02@gmail.com"
             className="text-blue-600 underline"
