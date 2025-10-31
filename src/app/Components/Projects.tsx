@@ -1,14 +1,6 @@
 import React from "react";
 import Image from "next/image";
-// import Project1Image from "/Images/Project1.jpeg";
-// import Project2Image from "/Images/Project2.png";
-import type { StaticImageData } from "next/image";
-// import ReactImage from "/Images/React.png";
-// import PythonImage from "/Images/Python.png";
-// import NodeJSImage from "/Images/Node.png";
-// import MongoDBImage from "/Images/MongoDB.png";
-// import ExpresJSImage from "/Images/Expressjs.png";
-import { ArrowRight, GitBranchPlus, Link, FolderGit } from "lucide-react";
+import { ArrowRight, FolderGit } from "lucide-react";
 
 const Project1Image = "/Images/Project1.jpeg";
 const Project2Image = "/Images/Project2.png";
@@ -82,7 +74,7 @@ const Projects = () => {
   return (
     <div className="flex flex-col gap-10 md:gap-20 mt-10 md:mt-10 px-0 md:px-0">
       {/* Project image */}
-      {projects.map((project, index) => (
+      {projects.map((project) => (
         <div
           key={project.ProjectName}
           className={`flex flex-col items-center gap-6`}

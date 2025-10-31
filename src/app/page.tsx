@@ -1,61 +1,10 @@
 "use client";
 
-import {
-  ArrowRight,
-  ChevronsDown,
-  Eye,
-  Heart,
-  ArrowUpRight,
-} from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Project1 from "./Components/Projects";
 import SocialIcons from "./Components/socialIcons";
 import { FileText, PersonStanding } from "lucide-react";
-
-type CapabilityCard = {
-  title: string;
-  description: string;
-  bgColor: string;
-};
-
-const cards: CapabilityCard[] = [
-  {
-    title: "User Experience and Product Design",
-    description:
-      "Enhance user interactions and product aesthetics for consumer apps, SaaS, and Enterprise products",
-    bgColor: "#FCBDBD",
-  },
-  {
-    title: "User Research & Usability Testing",
-    description:
-      "Cather insights to inform design decisions for diverse user groups with research and usability studies.",
-    bgColor: "#FCD8BD",
-  },
-  {
-    title: "Frontend Engineer",
-    description:
-      "A Engineer who know how to play with design and bring them in real-world, many of them know only design or code, but here’s me who do both.",
-    bgColor: "#BDDCFC",
-  },
-  {
-    title: "Full-stack JS Developer",
-    description:
-      "Fluent in Data Structures & Software Design with JS. Experienced in building full-stack apps (MERN).",
-    bgColor: "#AEDEAE",
-  },
-];
-
-const rotateCards: string[] = [
-  "-rotate-5",
-  "rotate-2 md:-rotate-1",
-  "-rotate-2 md:rotate-2",
-  "rotate-5",
-];
-const CardPlaceing: string[] = [
-  "m-0",
-  "md:-mt-8 -md-6",
-  "mb-1 -mt-2 md:mt-0",
-  "-mt-3 md:mt-10",
-];
+import Image from "next/image";
 
 export default function Home() {
   const handleDownloadCSVButton = () => {
@@ -99,10 +48,12 @@ export default function Home() {
             <div className="flex justify-between items-center">
               <div className="flex justify-center items-center gap-5">
                 <div className="rounded-md p-1 bg-white w-10">
-                  <img
+                  <Image
                     className="w-full"
                     src="/images/webninjaz_logo.jpeg"
                     alt="Webninjaz logo"
+                    width={10}
+                    height={10}
                   />
                 </div>
 

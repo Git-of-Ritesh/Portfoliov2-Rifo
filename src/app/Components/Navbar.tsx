@@ -1,25 +1,9 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from "react";
-import {
-  Copy,
-  House,
-  UserRound,
-  PackageOpen,
-  BookOpenText,
-  AlignLeft,
-  X,
-} from "lucide-react";
-import MobileDropdown from "./MobileDropdown";
-import dynamic from "next/dynamic";
+import React, { useRef, useEffect } from "react";
+import { House, UserRound, PackageOpen } from "lucide-react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
-
-// Lazy-load Lottie to keep initial JS small; only loads when the checkmark is shown
-const DotLottieReact = dynamic(
-  () => import("@lottiefiles/dotlottie-react").then((m) => m.DotLottieReact),
-  { ssr: false, loading: () => null }
-);
 
 type NavItem = {
   id: string;
@@ -42,19 +26,6 @@ const Navbar = () => {
   const router = useRouter();
 
   const pathName = usePathname();
-
-  const [copiedMail, setCopiedMail] = useState(false);
-  const email = "pvtriteshpandey02@gmail.com";
-
-  const handleCopyMail = () => {
-    navigator.clipboard.writeText(email).then(() => {
-      setCopiedMail(true);
-      setTimeout(() => setCopiedMail(false), 4000);
-    });
-  };
-
-  const [mobileMenuActive, setMobileMenuActive] = useState(false);
-  const toggleMobileMenu = () => setMobileMenuActive((prev) => !prev);
 
   // Active nav indicator
   const activeIndex = navItems.findIndex((item) => item.path === pathName);
@@ -108,28 +79,6 @@ const Navbar = () => {
           </Link>
         ))}
       </div>
-
-      {/* menu for mobile
-      {!mobileMenuActive ? (
-        <button
-          onClick={toggleMobileMenu}
-          className="logo relative bg-white flex md:hidden lg:hidden gap-2 p-3 rounded-xl"
-        >
-          Menu
-          <AlignLeft className="border-1 border-gray-500 rounded-md p-1 stroke-1 drop-shadow-gray-200 drop-shadow-xl" />
-        </button>
-      ) : (
-        <button
-          onClick={toggleMobileMenu}
-          className={`logo relative transition-all duration-300 ${
-            mobileMenuActive ? "rounded-3xl" : "rounded-none"
-          } bg-white flex md:hidden lg:hidden gap-2 p-3`}
-        >
-          <X />
-        </button>
-      )}
-
-      {mobileMenuActive && <MobileDropdown />} */}
     </div>
   );
 };

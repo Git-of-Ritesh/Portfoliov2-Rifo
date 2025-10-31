@@ -90,10 +90,12 @@ export default function AboutPage() {
             >
               <div className="flex justify-center items-center gap-5">
                 <div className="rounded-md p-1 bg-white w-10">
-                  <img
+                  <Image
                     className="w-full"
                     src={exp.imgUrl}
                     alt="Webninjaz logo"
+                    width={10}
+                    height={10}
                   />
                 </div>
 
@@ -142,10 +144,12 @@ export default function AboutPage() {
             height={100}
           />
 
-          <img
-            className="w-80 h-100 p-2 bg-white rotate-6"
+          <Image
+            className=" p-2 bg-white rotate-6"
             src="/galleryImages/About_image.JPG"
             alt="myImages"
+            width={300}
+            height={100}
           />
         </div>
 
@@ -166,10 +170,12 @@ export default function AboutPage() {
             height={100}
           />
 
-          <img
-            className="w-80 h-100 p-2 bg-white -rotate-10"
+          <Image
+            className=" p-2 bg-white -rotate-10"
             src="/galleryImages/image5.jpeg"
             alt="myImages"
+            width={300}
+            height={100}
           />
         </div>
       </section>
