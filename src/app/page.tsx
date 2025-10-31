@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useRef } from "react";
 import {
   ArrowRight,
   ChevronsDown,
@@ -9,7 +8,8 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 import Project1 from "./Components/Projects";
-import Footer from "./Components/Footer";
+import SocialIcons from "./Components/socialIcons";
+import { FileText, PersonStanding } from "lucide-react";
 
 type CapabilityCard = {
   title: string;
@@ -58,8 +58,6 @@ const CardPlaceing: string[] = [
 ];
 
 export default function Home() {
-  const lernMoreRef = useRef<HTMLDivElement>(null);
-
   const handleDownloadCSVButton = () => {
     const pdfLink = "Resume.pdf";
     const link = document.createElement("a");
@@ -74,133 +72,88 @@ export default function Home() {
     document.body.removeChild(link);
   };
 
-  const scrollToCards = () => {
-    lernMoreRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <div className="flex flex-col gap-80 mt-30 md:mt-50 z-40">
-      <div className="flex flex-col pl-5 md:pl-20 justify-center">
+    <div className="flex flex-col gap-20 mt-8 md:mt-30 z-40">
+      {/* Hero section */}
+      <div className="flex flex-col pl-5 px-5 md:px-100 justify-center">
         <div className=" relative flex gap-4">
-          <h1 className="text-3xl hi md:text-6xl font-semibold geist-font-bold">
-            Hi, I am Ritesh
+          <h1 className="text-2xl md:text-4xl font-semibold geist-font-bold">
+            Welcone to Ritesh folio
           </h1>
         </div>
 
-        <div>
-          <h2 className="text-3xl md:text-6xl font-semibold geist-font-bold">
-            I am Software Engineer,
-          </h2>
-        </div>
+        <div className="flex flex-col mt-4 gap-8">
+          <p className="geist-font-bold text-sm md:text-lg text-gray-700">
+            Hey 👋 I’m Ritesh, a software developer and designer who believes
+            good design starts with empathy. My work combines art, logic, and
+            emotion — all shaped into code. Have a look at what I’ve been
+            building. I’ve always loved creating things that make people smile —
+            from small UI interactions to full-blown web apps.
+          </p>
 
-        <div>
-          <h2 className="text-3xl md:text-6xl font-semibold geist-font-bold">
-            A Engineer who know both design{" "}
-          </h2>
-        </div>
+          <div className="flex flex-col gap-2">
+            <h4 className="text-md geist-font-bold text-gray-500">
+              Currently Working
+            </h4>
 
-        <div className="flex flex-col gap-2 md:gap-6">
-          <h2 className="text-3xl md:text-6xl font-semibold geist-font-bold">
-            and code.
-          </h2>
-          <h3 className="text-sm md:text-xl text-gray-500 geist-font">
-            Currently Based in Gurugram, Haryana, India
-          </h3>
-        </div>
+            <div className="flex justify-between items-center">
+              <div className="flex justify-center items-center gap-5">
+                <div className="rounded-md p-1 bg-white w-10">
+                  <img
+                    className="w-full"
+                    src="/images/webninjaz_logo.jpeg"
+                    alt="Webninjaz logo"
+                  />
+                </div>
 
-        <div className="flex flex-col md:flex-row md:items-center gap-5 mt-3 md:mt-8">
-          <div className="flex gap-3">
-            <button
-              onClick={scrollToCards}
-              className="flex justify-center items-center gap-4 cursor-pointer bg-black rounded-2xl px-5 py-1 md:px-10 md:py-3 text-white geist-font text-sm md:text-xl"
-            >
-              Learn More
-              <ChevronsDown className="stroke-1 p-0.5 border-1 border-gray-400 bg-gray-800 rounded-md" />
-            </button>
+                <span>
+                  <p className="geist-font-bold text-sm">Software Developer</p>
+                  <p className="geist-font-bold text-sm text-gray-500">
+                    Webninjaz Technologies
+                  </p>
+                </span>
+              </div>
+              <p className="geist-font-bold text-sm text-gray-500">
+                July - Present
+              </p>
+            </div>
+          </div>
+
+          {/* socials */}
+          <div className="w-fit">
+            <SocialIcons />
+          </div>
+
+          <div className="w-full flex gap-2">
             <button
               onClick={handleDownloadCSVButton}
-              className="bg-white rounded-2xl px-6 py-3 md:px-10 md:py-3 geist-font md:text-xl text-sm cursor-pointer"
+              className="bg-white flex justify-center items-center rounded-2xl px-6 py-3 md:px-10 md:py-3 geist-font-bold text-sm cursor-pointer"
             >
               Download CV
+              <FileText className="w-6 h-4" />
+            </button>
+
+            <button
+              onClick={handleDownloadCSVButton}
+              className="bg-white flex justify-center items-center rounded-2xl px-6 py-3 md:px-10 md:py-3 geist-font-bold text-sm cursor-pointer"
+            >
+              More About Me
+              <PersonStanding className="w-6 h-4" />
             </button>
           </div>
-          <div className="flex gap-2">
-            <Eye className="stroke-1" />
-            <h3 className="geist-font text-gray-500">Peoples visited</h3>
-            <h3 className="geist-font">2,432</h3>
-          </div>
-          <div className="flex gap-2">
-            <Heart className="stroke-1" />
-            <h3 className="geist-font text-gray-500">Likes</h3>
-            <h3 className="geist-font">932</h3>
-          </div>
         </div>
-        <div className="flex gap-2 items-center p-3 sm:p-4 bg-linear-to-r from-green-100 to-transparent rounded-l-full sm:w-1/2 mt-5">
-          <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
-          <p className="flex items-center gap-2 geist-font">
-            Currently working at Webninjaz{" "}
-            <img
-              className="sm:w-25 w-20"
-              src="https://webninjaz.com/wp-content/uploads/2024/08/logo-white.png"
-              alt="Webninjaz logo"
-            />
-          </p>
-        </div>
-        <div ref={lernMoreRef}></div>
       </div>
 
-      {/* cards sections */}
-      <section>
-        <div className="flex justify-center geist-font-bold text-3xl md:text-5xl">
-          Things i am capable of
-        </div>
-        <div className="flex justify-center text-center geist-font-bold text-sm md:text-md px-10 md:px-80 mt-5 md:mt-10 text-gray-600">
-          Here’s a collection of things I’ve actually done — not just read about
-          or watched tutorials for. From building full-stack apps to designing
-          clean UIs that don’t hurt your eyes, I tend to get things working
-          eventually. But hey, deadlines are sacred.
-        </div>
-
-        {/* cards Div */}
-        <div className="flex md:flex-row flex-col items-center justify-center mt-26">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className={`flex flex-col w-fit h-fit gap-10 p-7 rounded-2xl ${rotateCards[index]} ${CardPlaceing[index]} drop-shadow-2xl`}
-              style={{ backgroundColor: card.bgColor }}
-            >
-              <h2 className="w-60 geist-font-bold-lineH text-2xl">
-                {card.title}
-              </h2>
-              <h3 className="w-60 geist-font text-md text-gray-800">
-                {card.description}
-              </h3>
-              <button className="bg-transparent w-fit border-1 border-gray-100 p-1 rounded-3xl z-30 backdrop-blur-3xl">
-                <ArrowUpRight className="text-white z-40" />
-              </button>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* Projexts sections */}
-      <section className="flex flex-col">
-        <div className="flex justify-center geist-font-bold text-3xl md:text-5xl">
+      <section className="flex px-5 md:px-100 flex-col">
+        <div className="flex geist-font-bold text-xl md:text-4xl">
           Featured Projects
         </div>
-        <div className="flex justify-center text-center geist-font-bold px-5 md:px-80 text-sm md:text-md mt-5 md:mt-10 text-gray-600">
-          Proof I’ve Done More Than Just Watch Tutorials.
-        </div>
         <Project1 />
-        <button className="flex justify-center items-center gap-4 mt-10 md:mt-30">
-          See more projects
-          <ArrowRight className="border-1 border-gray-400 rounded-md stroke-1" />
+        <button className="bg-white flex justify-center items-center rounded-2xl mt-10 px-6 py-3 md:px-10 md:py-3 geist-font-bold text-sm cursor-pointer">
+          View More Projects
+          <ArrowRight className="w-6 h-4" />
         </button>
-      </section>
-
-      {/* footer section */}
-      <section>
-        <Footer />
       </section>
     </div>
   );
