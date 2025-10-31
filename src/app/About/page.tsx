@@ -5,14 +5,14 @@ import Image from "next/image";
 const experience = [
   {
     id: "1",
-    imgUrl: "./Images/webninjaz_logo.jpeg",
+    imgUrl: "/Images/webninjaz_logo.jpeg",
     title: "Software Developer",
     company: "Webninjaz",
     duration: "July 2025 - Present",
   },
   {
     id: "2",
-    imgUrl: "./Images/Novexus.jpeg",
+    imgUrl: "/Images/Novexus.jpeg",
     title: "Full Stack Developer Intern",
     company: "Novexus Technologies",
     duration: "July 2024 - November 2025",
@@ -91,11 +91,10 @@ export default function AboutPage() {
               <div className="flex justify-center items-center gap-5">
                 <div className="rounded-md p-1 bg-white w-10">
                   <Image
-                    className="w-full"
                     src={exp.imgUrl}
                     alt="Webninjaz logo"
-                    width={10}
-                    height={10}
+                    width={70}
+                    height={120}
                   />
                 </div>
 

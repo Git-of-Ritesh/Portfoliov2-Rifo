@@ -50,10 +50,10 @@ export default function Home() {
                 <div className="rounded-md p-1 bg-white w-10">
                   <Image
                     className="w-full"
-                    src="/images/webninjaz_logo.jpeg"
+                    src="/Images/webninjaz_logo.jpeg"
                     alt="Webninjaz logo"
-                    width={10}
-                    height={10}
+                    width={70}
+                    height={120}
                   />
                 </div>
 
