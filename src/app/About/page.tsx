@@ -41,7 +41,7 @@ const experience = [
 export default function AboutPage() {
   const [openId, setOpenId] = useState<string | null>(null);
   const root = useRef<HTMLDivElement | null>(null);
-  const scope = useRef<any>(null);
+  const scope = useRef<ReturnType<typeof createScope> | null>(null);
 
   useEffect(() => {
     // Initialize Anime.js scoped environment
