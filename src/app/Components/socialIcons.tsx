@@ -21,7 +21,7 @@ const SocialIcons: React.FC = () => {
       <div className="relative flex items-end gap-x-2">
         {/* GitHub */}
         <a
-          href="https://github.com/yourusername"
+          href="https://github.com/Git-of-Ritesh"
           target="_blank"
           rel="noopener noreferrer"
           style={{ clipPath: "url(#squircleClip)" }}
@@ -39,7 +39,7 @@ const SocialIcons: React.FC = () => {
 
         {/* LinkedIn */}
         <a
-          href="https://linkedin.com/in/yourusername"
+          href="https://www.linkedin.com/in/ritesh-kumar-pandey-9b3296305/"
           target="_blank"
           rel="noopener noreferrer"
           style={{ clipPath: "url(#squircleClip)" }}
@@ -57,7 +57,7 @@ const SocialIcons: React.FC = () => {
 
         {/* Dribble */}
         <a
-          href="https://dribbble.com/yourusername"
+          href="https://dribbble.com/UIbyraj"
           target="_blank"
           rel="noopener noreferrer"
           style={{ clipPath: "url(#squircleClip)" }}
@@ -76,7 +76,7 @@ const SocialIcons: React.FC = () => {
         {/* Threads */}
         {/* Threads */}
         <a
-          href="https://www.threads.net/@yourusername"
+          href="https://www.threads.com/@rajjj.pandeyy?igshid=NTc4MTIwNjQ2YQ=="
           target="_blank"
           rel="noopener noreferrer"
           style={{ clipPath: "url(#squircleClip)" }}

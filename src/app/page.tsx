@@ -4,11 +4,15 @@ import { ArrowRight } from "lucide-react";
 import Project1 from "./Components/Projects";
 import SocialIcons from "./Components/socialIcons";
 import { FileText, PersonStanding } from "lucide-react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 
 export default function Home() {
+  const Router = useRouter();
+
+  // handle Download CV button
   const handleDownloadCSVButton = () => {
-    const pdfLink = "Resume.pdf";
+    const pdfLink = "Resume 4.pdf";
     const link = document.createElement("a");
 
     link.href = pdfLink;
@@ -19,6 +23,11 @@ export default function Home() {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+  };
+
+  // handle More About me button
+  const handleMoreAboutMeButton = () => {
+    Router.push("/About");
   };
 
   return (
@@ -85,8 +94,8 @@ export default function Home() {
             </button>
 
             <button
-              onClick={handleDownloadCSVButton}
               className="bg-white flex justify-center items-center rounded-2xl px-6 py-3 md:px-10 md:py-3 geist-font-bold text-sm cursor-pointer"
+              onClick={handleMoreAboutMeButton}
             >
               More About Me
               <PersonStanding className="w-6 h-4" />
