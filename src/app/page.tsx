@@ -56,7 +56,7 @@ export default function Home() {
 
             <div className="flex justify-between items-center">
               <div className="flex justify-center items-center gap-5">
-                <div className="rounded-md p-1 bg-white w-10">
+                <div className="rounded-md bg-white w-10">
                   <Image
                     className="w-full"
                     src="/Images/Akoode_logo.png"
