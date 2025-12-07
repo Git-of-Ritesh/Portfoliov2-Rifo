@@ -145,14 +145,14 @@ export default function AboutPage() {
               famous nowadays for <span className="font-bold">MAHAKUMBH</span>.
             </p>
 
-            <p className=" text-gray-800 mb-2 geist-font-bold">
+            <p className=" text-gray-800 mb-2 geist-font-bold text-sm md:text-lg">
               My passion for coding began the day I realized how lines of code
               could bring ideas to life. Since then, I’ve been deeply engaged
               with computers — learning, experimenting, and constantly improving
               my craft as a developer.
             </p>
 
-            <p className=" text-gray-800 mb-2 geist-font-bold">
+            <p className=" text-gray-800 mb-2 geist-font-bold text-sm md:text-lg">
               So, I completed my graduation in{" "}
               <span className="font-bold">Computer Science in 2025</span> and
               have been continuously improving my software development skills.
@@ -188,12 +188,12 @@ export default function AboutPage() {
                   </div>
 
                   <span>
-                    <p className="geist-font-bold flex items-center gap-1 md:gap-3 text-xs md:text-md">
+                    <p className="geist-font-bold flex items-center gap-1 md:gap-3 text-xs md:text-sm ">
                       {exp.title}{" "}
                       <span className="w-1 h-1 rounded-full bg-black"></span>
                       {exp.company}
                     </p>
-                    <p className="geist-font-bold flex flex-col md:flex-row md:items-center gap-1 md:gap-3 text-xs md:text-md text-gray-500">
+                    <p className="geist-font-bold flex flex-col md:flex-row md:items-center gap-1 md:gap-3 text-xs md:text-sm text-gray-500">
                       <span>
                         {exp.duration}
                         {""}

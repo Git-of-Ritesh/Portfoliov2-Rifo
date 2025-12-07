@@ -59,7 +59,7 @@ export default function Home() {
                 <div className="rounded-md p-1 bg-white w-10">
                   <Image
                     className="w-full"
-                    src="/Images/webninjaz_logo.jpeg"
+                    src="/Images/Akoode_logo.png"
                     alt="Webninjaz logo"
                     width={70}
                     height={120}
@@ -67,9 +67,11 @@ export default function Home() {
                 </div>
 
                 <span>
-                  <p className="geist-font-bold text-sm">Software Developer</p>
+                  <p className="geist-font-bold text-sm">
+                    Software Application Developer
+                  </p>
                   <p className="geist-font-bold text-sm text-gray-500">
-                    Webninjaz Technologies
+                    Akoode Technologies
                   </p>
                 </span>
               </div>
